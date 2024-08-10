@@ -11,8 +11,10 @@ import {
 import IMG_1193 from "../assets/IMG_1193.jpg";
 import IMG_1076 from "../assets/IMG_1076.jpg";
 import IMG_1195 from "../assets/IMG_1195.jpg";
+import { useTranslation } from "react-i18next";
 
 function Home() {
+  const { t } = useTranslation();
   const cardStyle = {
     display: "flex",
     flexDirection: "column",
@@ -29,16 +31,16 @@ function Home() {
     <Container>
       <Box my={4}>
         <Typography variant="h3" component="h1" gutterBottom>
-          Akkaya Elektroniğe hoş geldiniz.
+          {t("WELCOME")}
         </Typography>
         <Typography variant="h5" paragraph>
-          Led ekran ve aradığınız her şeyi burada bulabilirsiniz.
+          {t("LED_SCREEN_AND_EVERYTHING")}
         </Typography>
       </Box>
 
       <Box my={4}>
         <Typography variant="h4" component="h2" gutterBottom>
-          Hizmetlerimiz
+          {t("SERVICES")}
         </Typography>
         <Grid container spacing={4}>
           <Grid item xs={12} md={4}>
@@ -52,11 +54,10 @@ function Home() {
               />
               <CardContent>
                 <Typography variant="h5" component="h2">
-                  Led Işıklar
+                  {t("LED_LIGHTS")}
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  City Mall Alışveriş Merkezi ışıklandırmalar için bizi tercih
-                  etti.
+                  {t("CITYMALL_CHOOSE_US")}
                 </Typography>
               </CardContent>
             </Card>
@@ -72,10 +73,10 @@ function Home() {
               />
               <CardContent>
                 <Typography variant="h5" component="h2">
-                  Led Yazılar
+                  {t("LED_SIGNS")}
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  KelinYeri Led yazılar için bizi tercih etti.
+                  {t("KELIN_YERI")}
                 </Typography>
               </CardContent>
             </Card>
@@ -91,11 +92,10 @@ function Home() {
               />
               <CardContent>
                 <Typography variant="h5" component="h2">
-                  Led Aydınlatma Sistemleri
+                  {t("LED_Lighting_Systems")}
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  City Mall avm'nin her bir yanını aydınlatan canlandıran
-                  sistem.
+                  {t("City_Mall_Lighting_System")}
                 </Typography>
               </CardContent>
             </Card>
@@ -105,7 +105,7 @@ function Home() {
 
       <Box my={4}>
         <Typography variant="h4" component="h2" gutterBottom>
-          Müşteri Değerlendirmeleri
+          {t("Customer_Reviews")}
         </Typography>
         <Grid container spacing={4}>
           <Grid item xs={12} md={4}>
@@ -115,8 +115,7 @@ function Home() {
                   Dilek Aslan
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Çok nazik davrandılar ve tüm istediklerimi daha fazlasıyla
-                  yerine getirdiler. Güzellik salonum çok şık görünüyor.
+                  {t("Dilek_Aslan_Review")}
                 </Typography>
               </CardContent>
             </Card>
@@ -128,8 +127,7 @@ function Home() {
                   Serkan Ceviz
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Nişanım için çok güzel led aydınlatma tasarladılar. Çok titiz
-                  ve bir o kadar da hızlıydı.
+                  {t("Serkan_Ceviz_Review")}
                 </Typography>
               </CardContent>
             </Card>
@@ -141,7 +139,7 @@ function Home() {
                   City Mall Sahibi
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Çok dikkat çekiyoruz. Ellerinize sağlık böyle devam edin.
+                  {t("City_Mall_Owner_Review")}
                 </Typography>
               </CardContent>
             </Card>

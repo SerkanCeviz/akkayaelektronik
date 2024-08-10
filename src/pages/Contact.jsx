@@ -1,8 +1,9 @@
 import React from 'react';
-import { Container, Typography, Box} from '@mui/material';
+import { Container, Typography, Box } from '@mui/material';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
+import { useTranslation } from 'react-i18next'; // i18n'den useTranslation'u içeri aktarın
 
 // Leaflet marker icons fix
 delete L.Icon.Default.prototype._getIconUrl;
@@ -13,35 +14,37 @@ L.Icon.Default.mergeOptions({
 });
 
 function Contact() {
+  const { t } = useTranslation(); // useTranslation hook'unu kullanın
+
   return (
     <Container>
       <Box my={4}>
         <Typography variant="h3" component="h1" gutterBottom>
-          Bizimle İletişime Geçin
+          {t('Contact_Title')}
         </Typography>
         <Typography variant="body1" paragraph>
-          Herhangi bir sorunuz varsa veya daha fazla bilgi almak istiyorsanız lütfen bizimle iletişime geçiniz.
+          {t('Contact_Description')}
         </Typography>
       </Box>
 
       <Box my={4}>
         <Typography variant="h4" component="h2" gutterBottom>
-          İletişim Bilgilerimiz
+          {t('Contact_Info_Title')}
         </Typography>
         <Typography variant="body1" paragraph>
-          <strong>Telefon:</strong> (0362) 447 22 32
+          <strong>{t('Contact_Phone')}</strong>
         </Typography>
         <Typography variant="body1" paragraph>
-          <strong>Email:</strong> buseakkaya@gmail.com
+          <strong>{t('Contact_Email')}</strong>
         </Typography>
         <Typography variant="body1" paragraph>
-          <strong>Adres:</strong> Esenevler, 100.yıl Bulvarı 21/B Samsun
+          <strong>{t('Contact_Address')}</strong>
         </Typography>
       </Box>
 
       <Box my={4}>
         <Typography variant="h4" component="h2" gutterBottom>
-          Google Maps üzerinden adresimiz
+          {t('Contact_Map_Title')}
         </Typography>
         <MapContainer center={[41.3309702, 36.3182968]} zoom={10} style={{ height: '400px', width: '100%' }}>
           <TileLayer
@@ -50,7 +53,7 @@ function Contact() {
           />
           <Marker position={[41.3309702, 36.3182968]}>
             <Popup>
-              Akkaya Elektronik <br /> Esenevler, 100.yıl Bulvarı 21/B Samsun
+              {t('Contact_Map_Popup')}
             </Popup>
           </Marker>
         </MapContainer>
