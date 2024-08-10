@@ -67,10 +67,10 @@ const resources = {
   },
   tr: {
     translation: {
-      Home: "Ana Sayfa",
-      About: "Hakkımızda",
-      Projects: "Projeler",
-      Contact: "İletişim",
+      Home: "ANA SAYFA",
+      About: "HAKKIMIZDA",
+      Projects: "PROJELER",
+      Contact: "İLETİŞİM",
       WELCOME: "Akkaya Elektroniğe hoş geldiniz.",
       LED_SCREEN_AND_EVERYTHING:
         "Led ekran ve aradığınız her şeyi burada bulabilirsiniz.",
