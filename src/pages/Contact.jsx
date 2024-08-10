@@ -51,7 +51,7 @@ function Contact() {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           />
-          <Marker position={[41.3309702, 36.3182968]}>
+          <Marker position={[41.322919, 36.300788]}>
             <Popup>
               {t('Contact_Map_Popup')}
             </Popup>
